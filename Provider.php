@@ -71,7 +71,8 @@ class Provider extends AbstractProvider
     protected function formatAvatar(array $user)
     {
         if (empty($user['avatar'])) {
-            return null;
+            # Get default avatar based on discriminator
+            return sprintf("https://cdn.discordapp.com/embed/avatars/%s.png", ($user['discriminator'] % 5));
         }
 
         $isGif = preg_match('/a_.+/m', $user['avatar']) === 1;
