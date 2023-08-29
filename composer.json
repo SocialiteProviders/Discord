@@ -1,5 +1,5 @@
 {
-    "name": "socialiteproviders/discord",
+    "name": "dfxphoenix/socialiteproviders-discord",
     "description": "Discord OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "keywords": [
@@ -21,7 +21,7 @@
         "docs": "https://socialiteproviders.com/discord"
     },
     "require": {
-        "php": "^8.0",
+        "php": "^7.4 || ^8.0",
         "ext-json": "*",
         "socialiteproviders/manager": "^4.4"
     },

@@ -117,8 +117,8 @@ class Provider extends AbstractProvider
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['id'],
-            'nickname' => $user['username'].($user['discriminator'] !== '0' ? '#'.$user['discriminator'] : ''),
-            'name'     => $user['username'],
+            'username' => $user['username'].($user['discriminator'] !== '0' ? '#'.$user['discriminator'] : ''),
+            'name'     => $user['global_name'],
             'email'    => $user['email'] ?? null,
             'avatar'   => $this->formatAvatar($user),
         ]);
